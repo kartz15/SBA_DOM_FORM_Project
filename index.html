@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>User Registration Form</h1>
+    <div class="container">
+        <!-- Registration Form -->
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="userId">User ID <span class="required">*</span></label>
+                <input type="text" id="userId" name="userId">
+                <div id="userIdError" class="error"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="userName">Name <span class="required">*</span></label>
+                <input type="text" id="userName" name="userName">
+            </div>
+            
+            <div class="form-group">
+                <label for="userEmail">Email <span class="mandatory">*</span></label>
+                <input type="email" id="userEmail" name="userEmail" required>
+                <div id="userEmailError" class="error"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="userPhone">Phone</label>
+                <input type="text" id="userPhone" min ="10" max="10" name="userPhone">
+                <div id="userPhoneError" class="error"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="userPhoto">Photo <span class="required">*</span></label>
+                <input type="file" id="userPhoto" name="userPhoto" accept="image/*">
+            </div>
+            
+            <div class="form-group">
+                <label for="userResume">Resume <span class="required">*</span></label>
+                <input type="file" id="userResume" name="userResume" accept=".pdf">
+            </div>
+            
+            <button type="submit">Register</button>
+        </form>
+
+        <!-- Table Container -->
+        <div class="table-container">
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>User ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Photo</th>
+                        <th>Resume</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be added dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Popup for User Details -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <img id="popupImage" src="" alt="User Photo">
+                <span class="close">&times;</span>
+            </div>
+            <div class="popup-details">
+                <p id="popupName">Name: </p>
+                <p id="popupEmail">Email: </p>
+                <p id="popupPhone">Phone: </p>
+                <p><a id="popupResumeLink" href="" target="_blank">View Resume</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup for Resume -->
+    <div id="resumePopup" class="popup">
+        <div class="popup-content resume-popup-content">
+            <span class="close" onclick="closeResumePopup()">&times;</span>
+            <iframe id="resumeIframe" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

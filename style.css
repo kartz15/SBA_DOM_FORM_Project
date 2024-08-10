@@ -1,0 +1,363 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f0f4f8;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    background: #007bff;
+    margin: 0;
+}
+
+/* Container for form and table */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adjust gap between form and table */
+    padding: 20px;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+/* Form Styles */
+form {
+    max-width: 400px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    margin-right:15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.required {
+    color: red;
+    margin-left: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="file"] {
+    border: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+
+button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+button:focus {
+    outline: 2px solid #0056b3;
+    outline-offset: 2px;
+}
+
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+/* Table Styles */
+.table-container {
+    flex: 1;
+    max-width: 100%;
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #007bff;
+    color: #fff;
+    padding:15px;
+    cursor: pointer; /* Make sure cursor indicates that header is clickable */
+}
+
+tr:hover {
+    background: #85a4d1;
+}
+
+img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+}
+
+/* Popup Styles
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.popup-header img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.popup-details p {
+    margin: 10px 0;
+}
+
+.popup-details a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.popup-details a:hover {
+    text-decoration: underline;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #007bff;
+} */
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 40px; /* Increase padding for larger content area */
+    border-radius: 12px; /* More rounded corners */
+    max-width: 90%;
+    max-height: 80%;
+    overflow: auto;
+    position: relative;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Popup Header */
+.popup-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #007bff; /* Bright background color */
+    color: #fff; /* White text color */
+    padding: 15px;
+    border-radius: 12px 12px 0 0; /* Rounded top corners */
+    width: 100%;
+    position: relative;
+}
+
+/* User Photo Styling */
+.popup-header img {
+    border-radius: 50%;
+    width: 120px; /* Larger photo */
+    height: 120px; /* Larger photo */
+    object-fit: cover;
+    margin-right: 20px;
+    border: 4px solid #fff; /* White border for better contrast */
+}
+
+/* Popup Details */
+.popup-details {
+    text-align: center;
+    color: #333; /* Dark text color for readability */
+}
+
+.popup-details p {
+    margin: 15px 0;
+    font-size: 18px; /* Larger text */
+}
+
+.popup-details a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold; /* Make link stand out */
+}
+
+.popup-details a:hover {
+    text-decoration: underline;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 28px; /* Larger close button */
+    color: #fff;
+    cursor: pointer;
+    background: #ff6f6f; /* Bright close button color */
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.close:hover {
+    background: #ff3b3b; /* Darker close button color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .popup-content {
+        width: 95%;
+        max-height: 90%;
+        padding: 20px;
+    }
+
+    .popup-header img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .popup-details p {
+        font-size: 16px;
+    }
+}
+
+
+/* Resume Popup Styles */
+.resume-popup-content {
+    max-width: 90%;
+    max-height: 90%;
+    overflow: hidden;
+}
+
+#resumeIframe {
+    width: 100%;
+    height: 600px; /* Adjust as needed */
+    border: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack form and table vertically on small screens */
+        gap: 20px; /* Increase gap between form and table */
+    }
+
+    form {
+        max-width: 100%;
+    }
+
+    .table-container {
+        flex: 1 1 auto; /* Allow table container to grow */
+    }
+}
+
+/* @media (max-width: 768px) {
+    .popup-content {
+        width: 95%;
+        max-height: 80%;
+        overflow: auto;
+    } */
+
+    .resume-popup-content {
+        width: 95%;
+        max-height: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
